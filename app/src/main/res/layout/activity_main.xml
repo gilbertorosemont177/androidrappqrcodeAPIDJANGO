@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    
+    
+    <SurfaceView
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cameraqrcode"
+        android:layout_width="700px"
+        android:layout_height="700px" />
+
+
+    <TextView
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"
+        android:text="Read Qrcode Etudiant"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cameraqrcode"
+
+        />
+
+
+    <TextView
+        android:layout_marginTop="40px"
+        android:layout_centerHorizontal="true"
+        android:text="text qui cache le qrcode"
+        android:id="@+id/txtqrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/title"
+
+        />
+
+    <TextView
+        android:layout_marginStart="50px"
+        android:id="@+id/usernameetudiant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtqrcode"
+        android:text="username etudiant"
+        android:layout_marginLeft="50px" />
+
+    <ImageView
+        android:layout_below="@+id/usernameetudiant"
+        android:id="@+id/imgetudiant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>
