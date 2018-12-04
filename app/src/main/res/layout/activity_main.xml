@@ -10,7 +10,6 @@
     
     
     <SurfaceView
-<<<<<<< HEAD
         android:layout_marginTop="20px"
         android:layout_centerHorizontal="true"
         android:id="@+id/cameraqrcode"
@@ -56,22 +55,6 @@
         android:id="@+id/imgetudiant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-=======
-        android:layout_centerHorizontal="true"
-        android:id="@+id/cameraqrcode"
-        android:layout_width="300px"
-        android:layout_height="300px" />
-
-    <TextView
-        android:text="sss"
-        android:id="@+id/txtqrcode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cameraqrcode"
-
-        />
-
->>>>>>> b4430f6c401326cdcd31a5fb919f523e365e0ebc
 
 
 
