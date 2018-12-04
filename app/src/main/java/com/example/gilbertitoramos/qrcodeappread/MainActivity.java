@@ -19,6 +19,7 @@ import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements GetAsyncResponse{
     TextView txtv;
     final int Requestid = 1001;
     CnxApiDjangoAsyncTask cnxApiDjango= new CnxApiDjangoAsyncTask();
-    TextView usernametextvie;
+    TextView usernametextvie,adresse,telephone;
     ImageView imgv;
 
     @Override
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements GetAsyncResponse{
 //        new CnxApiDjangoAsyncTask().execute("http://192.168.2.14:8001/homeapp/etudiantsinfo/"+res);
 
         cnxApiDjango.delegateforAllResponsesfromThisAsyncTask=this;
+       // cnxApiDjango.execute("http://192.168.2.43:8001/etudiantsinfo/gilbertorosemont177@gmail.com");
 
         sfv.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
@@ -118,7 +120,8 @@ public class MainActivity extends AppCompatActivity implements GetAsyncResponse{
                             Vibrator vibrator=(Vibrator)getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
                             vibrator.vibrate(1000);
                             String resultqrcode=qrcode.valueAt(0).displayValue;
-                            cnxApiDjango.execute("http://192.168.2.14:8001/homeapp/etudiantsinfo/"+resultqrcode);
+                           // cnxApiDjango.execute("http://192.168.2.14:8001/homeapp/etudiantsinfo/"+resultqrcode);
+                            cnxApiDjango.execute("http://192.168.2.43:8001/etudiantsinfo/"+resultqrcode);
 
 
 
@@ -139,7 +142,13 @@ public class MainActivity extends AppCompatActivity implements GetAsyncResponse{
                    try {
                    usernametextvie = findViewById(R.id.usernameetudiant);
                    usernametextvie.setText(j.getString("email"));
+                   adresse=findViewById(R.id.adresse);
+                   telephone=findViewById(R.id.tel);
+                   telephone.setText(j.getString("telephone"));
+                   adresse.setText(j.getString("address"));
                    imgv=findViewById(R.id.imgetudiant);
+                   Picasso.get().load("http://192.168.2.43:8001"+j.getString("img")).into(imgv);
+
                    }
                    catch (Exception e){
                        e.printStackTrace();

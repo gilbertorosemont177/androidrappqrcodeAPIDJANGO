@@ -32,7 +32,7 @@
     <TextView
         android:layout_marginTop="40px"
         android:layout_centerHorizontal="true"
-        android:text="text qui cache le qrcode"
+        android:text="User information"
         android:id="@+id/txtqrcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,20 +41,96 @@
 
         />
 
-    <TextView
-        android:layout_marginStart="50px"
-        android:id="@+id/usernameetudiant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
         android:layout_below="@+id/txtqrcode"
-        android:text="username etudiant"
-        android:layout_marginLeft="50px" />
+        android:id="@+id/layoutone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblusername"
+            android:text="Username :"
+
+            />
+        <TextView
+            android:layout_marginStart="50px"
+            android:id="@+id/usernameetudiant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtqrcode"
+            android:text="username etudiant"
+            android:layout_marginLeft="50px" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/layoutone"
+        android:id="@+id/layoutwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbladdresse"
+            android:text="Adresse :"
+
+            />
+        <TextView
+            android:layout_marginStart="50px"
+            android:id="@+id/adresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtqrcode"
+            android:text="username etudiant"
+            android:layout_marginLeft="50px" />
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/layoutwo"
+        android:id="@+id/layouthree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbltel"
+            android:text="Telephone :"
+
+            />
+        <TextView
+            android:layout_marginStart="50px"
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtqrcode"
+            android:text="username etudiant"
+            android:layout_marginLeft="50px" />
+
+
+
+    </LinearLayout>
+
+
 
     <ImageView
-        android:layout_below="@+id/usernameetudiant"
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layouthree"
         android:id="@+id/imgetudiant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="600px"
+        android:layout_height="600px" />
 
 
 
