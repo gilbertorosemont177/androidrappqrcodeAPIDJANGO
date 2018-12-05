@@ -107,7 +107,6 @@ public class MainActivity extends AppCompatActivity implements GetAsyncResponse
             @Override
             public void release() {
 
-
             }
 
             @Override

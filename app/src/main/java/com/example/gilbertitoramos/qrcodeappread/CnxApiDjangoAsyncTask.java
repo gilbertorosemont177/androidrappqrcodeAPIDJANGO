@@ -25,7 +25,6 @@ public class CnxApiDjangoAsyncTask extends AsyncTask<String, Void, JSONObject> {
     JSONObject jsonObject=null;
     GetAsyncResponse delegateforAllResponsesfromThisAsyncTask=null;
 
-
     private String readStream(InputStream is) throws IOException {
         StringBuilder sb = new StringBuilder();
         BufferedReader r = new BufferedReader(new InputStreamReader(is),1000);
