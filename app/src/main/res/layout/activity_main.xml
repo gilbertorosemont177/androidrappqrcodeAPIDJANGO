@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    
+    
+    <SurfaceView
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cameraqrcode"
+        android:layout_width="700px"
+        android:layout_height="700px" />
+
+
+    <TextView
+        android:layout_marginTop="20px"
+        android:layout_centerHorizontal="true"
+        android:text="Read Qrcode Etudiant"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cameraqrcode"
+
+        />
+
+
+    <TextView
+        android:id="@+id/txtqrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40px"
+        android:layout_marginBottom="10dp"
+        android:text="User information"
+
+        android:textStyle="bold" />
+
+    <LinearLayout
+
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:layout_below="@+id/txtqrcode"
+        android:id="@+id/informationlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_below="@+id/informationlayout"
+            android:id="@+id/layoutone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username :"
+
+
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="50px"
+                android:id="@+id/usernameetudiant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtqrcode"
+                android:text="username etudiant"
+                android:layout_marginLeft="50px" />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_below="@+id/layoutone"
+            android:id="@+id/layoutwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbladdresse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse :"
+
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="50px"
+                android:id="@+id/adresse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtqrcode"
+                android:text="username etudiant"
+                android:layout_marginLeft="50px" />
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_below="@+id/layoutwo"
+            android:id="@+id/layouthree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lbltel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telephone :"
+
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="50px"
+                android:id="@+id/tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtqrcode"
+                android:text="username etudiant"
+                android:layout_marginLeft="50px" />
+
+
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_marginTop="20px"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/layouthree"
+            android:id="@+id/imgetudiant"
+            android:layout_width="600px"
+            android:layout_height="600px" />
+
+
+
+
+
+    </LinearLayout>
+
+        <ProgressBar
+        android:visibility="invisible"
+        android:layout_below="@+id/txtqrcode"
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="188dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-38dp" />
+
+
+
+        <Button
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnclear"
+            android:layout_below="@+id/informationlayout"
+            android:layout_alignParentBottom="true"
+            android:text="Lire nouveau QrCode"
+            />
+
+
+
+
+
+</RelativeLayout>
